@@ -1,23 +1,25 @@
 ANALYSIS_PROMPT = """
 You are an expert ATS resume analyzer.
 
-Compare the resume with the job description.
+Analyze the resume against the job description.
 
 Return ONLY valid JSON.
+Do not add markdown.
+Do not add explanations outside JSON.
 
-Required format:
+JSON format:
 
 {{
-"match_score": number,
-"matching_skills": [],
-"missing_skills": [],
-"ats_keywords": {{
-    "found": [],
-    "missing": []
-}},
-"problems": [],
-"recommendations": [],
-"final_result": ""
+    "match_score": 0,
+    "matching_skills": [],
+    "missing_skills": [],
+    "ats_keywords": {{
+        "found": [],
+        "missing": []
+    }},
+    "problems": [],
+    "recommendations": [],
+    "final_result": ""
 }}
 
 Resume:
