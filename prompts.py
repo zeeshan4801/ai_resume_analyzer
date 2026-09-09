@@ -7,22 +7,24 @@ Return ONLY valid JSON.
 
 Required format:
 
-{
+{{
 "match_score": number,
 "matching_skills": [],
 "missing_skills": [],
-"ats_keywords": {
-"found": [],
-"missing": []
-},
+"ats_keywords": {{
+    "found": [],
+    "missing": []
+}},
 "problems": [],
 "recommendations": [],
 "final_result": ""
-}
+}}
 
 Resume:
+
 {resume}
 
 Job Description:
+
 {job_description}
 """
